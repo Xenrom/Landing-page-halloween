@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button {
+    padding: 8px 16px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    border: 0px ;
+    border-radius: 8px;
+    font-size: 1.2em;
+
+    display: block;
+}
+
+ul {
+    text-decoration: none;
+}
+
+button.home {
+    font-size: 2em;
+}
+
+button:hover {
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 81, 0);
+    transition: .2s;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 64px;
+}
+
+.menus ul
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 75px;
+    flex: 1;
+    margin-bottom: 100px;
+}
+
+.hero img {
+    width: 50vh;
+}
+
+.hero div {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+}
+
+.hero div p {
+    max-width: 500px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+.hero div .trick-or-treat {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.hero div .trick-or-treat button {
+    flex: 1;
+}
+
+button.o-border {
+    border: 2px solid rgb(255, 81, 0);
+}
+
+
+
+.footer p {
+    color: white;
+    text-align: center;
+}
