@@ -5,22 +5,17 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #000000;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    
+    background-color: black;
     font-family: 'Courier New', Courier, monospace;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 button {
+    width: 100%;
     padding: 8px 16px;
     text-decoration: none;
     text-align: center;
-    background-color: #000000;
+    background-color: inherit;
     color: white;
     border: 0px ;
     border-radius: 8px;
@@ -33,15 +28,51 @@ ul {
     text-decoration: none;
 }
 
+li {
+    list-style-type: none;
+}
+
 button.home {
+    width: auto;
     font-size: 2em;
 }
 
-button:hover {
+button.button-hover:hover {
     font-weight: bold;
     color: white;
     background-color: rgb(255, 81, 0);
     transition: .2s;
+}
+
+.pop-up-image {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    width: -webkit-fill-available;
+    justify-content: end;
+    align-items: center;
+    top: 10%;
+
+}
+
+.pop-up-image img {
+    width: 70vh;
+    height: 70vh;
+    max-width: 70vh;
+    max-width: 70vh;
+}
+
+.pop-up-image button {
+    max-width: fit-content;
+    position: fixed;
+}
+
+
+
+.container-1 {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .navigation {
@@ -49,6 +80,8 @@ button:hover {
     justify-content: space-between;
     align-items: center;
     padding: 16px 64px;
+    position: sticky;
+    top: 0;
 }
 
 .menus ul
@@ -59,18 +92,42 @@ button:hover {
     gap: 8px;
 }
 
+.pop-up {
+    display: inline-flex;
+    position: absolute;
+    background-color: rgb(68, 68, 68);
+    bottom: 50vh;
+    height: 10vh;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+    transition: 2s; 
+
+    left: -290px;
+}
+
+.pop-up p {
+    text-align: center;
+    overflow: hidden;
+}
+
+.pop-up:hover {
+    left: 0px;
+}
+
 .hero {
+    flex: 7;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    gap: 75px;
-    flex: 1;
+    gap: 134px;
     margin-bottom: 100px;
 }
 
 .hero img {
-    width: 50vh;
+    width: 60vh;
+    flex: 1.5;
 }
 
 .hero div {
@@ -78,12 +135,23 @@ button:hover {
     flex-direction: column;
     gap: 18px;
     text-align: center;
+    padding-top: 10px;
+    flex: 1;
+}
+
+.hero p.vertical {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
 }
 
 .hero div p {
     max-width: 500px;
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.8;
+}
+
+.hero  .menu {
+    flex: 1;
 }
 
 
@@ -95,15 +163,105 @@ button:hover {
 
 .hero div .trick-or-treat button {
     flex: 1;
+    border: 2px solid rgb(255, 81, 0);
+}
+
+.hero a {
+    text-decoration: none;
+    flex: 1;
+    border: 2px solid rgb(255, 81, 0);
+    border-radius: 8px;
+    color: white;
+    transition: .2s;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: larger;
+    padding: 8px 16px;
+}
+
+.hero a:hover {
+    background-color: rgb(255, 81, 0);
+    font-weight: bold;
 }
 
 button.o-border {
     border: 2px solid rgb(255, 81, 0);
 }
 
+.footer,
+.footer button {
+    background-color:black;
+    transition: 2.5s;
+}
 
+
+.footer {    
+    display: flex;
+    flex: 1;
+    max-height: 15vh;
+    position: fixed;
+    bottom: 0;
+    width: -webkit-fill-available;
+}
+
+.footer ul {
+    flex: 1;
+    display: flex;
+}
+
+.footer ul li {
+    flex: 1;
+}
+
+.footer button.button-hover{
+    flex: 1;
+    height: 15vh;
+    transition: 1s;
+    position: relative;
+    bottom: -110px;
+    padding-top: 40px;
+}
+
+.footer button:hover {
+    bottom: 40px;
+}
+
+.footer div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    color: white;
+}
 
 .footer p {
-    color: white;
-    text-align: center;
+    text-align: left;
 }
+
+.footer .small {
+    flex: 1;
+    font-size: small;
+    padding: 0px 40px;
+}
+
+.footer .big {
+    flex: 2;
+    padding: 0px 40px;
+}
+
+img.button-image {
+    width:  15vh;
+}
+
+.footer ul {
+    align-items: end;
+}
+
+
+.space {
+    height: 200vh;
+}
+
